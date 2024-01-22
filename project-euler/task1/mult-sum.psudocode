@@ -1,0 +1,13 @@
+Function findMultiplesSum(limit):
+    sum = 0
+    
+    For each number i from 1 to (limit - 1):
+        If i is a multiple of 3 or 5:
+            Add i to sum
+
+    Return sum
+
+limit = 1000
+result = findMultiplesSum(limit)
+
+Print "The sum of multiples of 3 or 5 below", limit, "is:", result
