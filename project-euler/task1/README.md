@@ -1,1 +1,1 @@
-#Project Euler task1
+# Project Euler task1
