@@ -1,0 +1,17 @@
+Function largestPrimeFactor(number):
+    i = 2
+
+    while i <= number:
+        if number is divisible by i:
+            number = number / i
+        else:
+            i = i + 1
+
+    return i
+
+Main Program:
+    targetNumber = 600851475143
+    result = largestPrimeFactor(targetNumber)
+
+    Output "Largest prime factor of " + targetNumber + ": " + result
+    Display "The largest prime factor is " + result
