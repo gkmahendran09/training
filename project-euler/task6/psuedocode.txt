@@ -1,0 +1,17 @@
+function isPalindrome(num):
+    // Convert the number to a string and check if it reads the same backward
+    return num.toString() equals reverseString(num.toString())
+
+function findLargestPalindrome():
+    largestPalindrome = 0
+
+    for i from 100 to 999:
+        for j from 100 to 999:
+            product = i * j
+            if isPalindrome(product) and product > largestPalindrome:
+                largestPalindrome = product
+
+    return largestPalindrome
+
+result = findLargestPalindrome()
+print("The largest palindrome made from the product of two 3-digit numbers is:", result)
