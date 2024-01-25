@@ -1,0 +1,20 @@
+function isPrime(n)
+    if n <= 1
+        return false
+    for i = 2 to sqrt(n)
+        if n % i equals 0
+            return false
+    return true
+
+primeNumbersBelow2000000 = empty array
+
+for num = 2 to 1,999,999
+    if isPrime(num)
+        add num to primeNumbersBelow2000000
+
+sumOfPrimesBelow2000000 = sum of all numbers in primeNumbersBelow2000000
+
+output "Sum of prime numbers below 2,000,000:" to console
+output sumOfPrimesBelow2000000 to console
+output "Sum of prime numbers below 2,000,000:" to document
+output sumOfPrimesBelow2000000 to document
