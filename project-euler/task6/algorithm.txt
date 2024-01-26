@@ -1,0 +1,5 @@
+Initialize a variable largestPalindrome to 0.
+Iterate through all possible combinations of two 3-digit numbers, let's say i and j, where both i and j range from 100 to 999.
+Calculate the product of i and j.
+Check if the product is a palindrome using a helper function. If it is, and the product is greater than the current largestPalindrome, update largestPalindrome with the new value.
+After all iterations, the largestPalindrome will contain the desired result.
