@@ -1,0 +1,7 @@
+1. result = BigInt(2) ** BigInt(1000)
+2. resultString = Convert result to string
+3. sum = 0
+4. for each digit in resultString do
+5.     sum += Convert digit to number
+6. end for
+7. Print sum

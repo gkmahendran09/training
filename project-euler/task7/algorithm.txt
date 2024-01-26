@@ -1,0 +1,6 @@
+Initialize a variable result and calculate 2^1000 using BigInt.
+Convert the result to a string and store it in resultString.
+Initialize a variable sum to store the sum of the digits.
+Iterate through each digit in resultString.
+Convert each digit to a number and add it to sum.
+Print sum.
