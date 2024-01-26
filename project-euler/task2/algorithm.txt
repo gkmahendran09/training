@@ -1,0 +1,19 @@
+Initialize Variables:
+
+Set fib1 to 1 (the first Fibonacci number).
+Set fib2 to 2 (the second Fibonacci number).
+Set sum to 0 to store the sum of even Fibonacci numbers.
+Fibonacci Loop:
+
+Start a while loop that continues as long as fib2 is less than or equal to the specified limit.
+Inside the loop:
+Check if fib2 is an even number using the condition if (fib2 % 2 === 0).
+If true, add fib2 to the sum.
+Calculate the next Fibonacci number (nextFib) by adding fib1 and fib2.
+Update fib1 to the current value of fib2, and fib2 to the calculated next Fibonacci number.
+Result:
+
+The loop exits when fib2 exceeds the specified limit. The final result is the sum of even Fibonacci numbers not exceeding the given limit.
+Output:
+
+Return the value of sum as the result.

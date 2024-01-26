@@ -1,0 +1,30 @@
+Function sumEvenFibonacci(limit):
+    // Initialize variables
+    let fib1 = 1
+    let fib2 = 2
+    let sum = 0
+
+    // Fibonacci loop
+    while fib2 <= limit:
+        // Check if fib2 is even
+        if fib2 is even:
+            // Add fib2 to the sum
+            sum += fib2
+
+        // Calculate the next Fibonacci number
+        let nextFib = fib1 + fib2
+
+        // Update fib1 and fib2
+        fib1 = fib2
+        fib2 = nextFib
+
+    // Return the final sum
+    return sum
+
+// Main program
+// Find the sum of even-valued Fibonacci terms not exceeding four million
+let limit = 4000000
+let result = sumEvenFibonacci(limit)
+
+// Display the result
+output "Sum of even-valued Fibonacci terms not exceeding " + limit + " is: " + result
