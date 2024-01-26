@@ -1,0 +1,14 @@
+Initialize Variables:
+
+Set i to 2, the smallest prime number.
+Factorization Loop:
+
+While i is less than or equal to number:
+Check if number is divisible by i.
+If true:
+Divide number by i.
+This step ensures that we are dividing out the smallest prime factor.
+If not divisible, increment i by 1.
+Return Result:
+
+The final value of i is the largest prime factor of the original number.
