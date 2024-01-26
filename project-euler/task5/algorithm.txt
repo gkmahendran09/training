@@ -1,0 +1,6 @@
+Initialize totalSum to 0.
+Iterate through each number in the numbers array:
+a. Convert the current number to a BigInt.
+b. Add the BigInt to totalSum.
+Convert totalSum to a string.
+Return the first ten characters of the string.

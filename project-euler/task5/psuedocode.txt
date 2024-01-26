@@ -1,0 +1,9 @@
+1. Initialize an array `numbers` with the given 150-digit numbers.
+2. Create a function findFirstTenDigitsSum(numbers):
+   a. Initialize a variable `totalSum` to 0.
+   b. Iterate through each number in the `numbers` array:
+      i. Convert the number to a BigInt and add it to `totalSum`.
+   c. Convert `totalSum` to a string.
+   d. Return the first ten characters of the string.
+3. Call findFirstTenDigitsSum(numbers) and store the result in a variable, e.g., `result`.
+4. Display the result using document.write("<p> The first ten digits of the sum of the 150 digit number is " + result + "</p>").
