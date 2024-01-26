@@ -1,0 +1,31 @@
+Sum of Squares Function:
+
+Initialize sum to 0.
+Loop from i = 1 to n.
+Add the square of each i to sum.
+Return sum.
+Square of Sum Function:
+
+Initialize total to 0.
+Loop from i = 1 to m.
+Add each i to total.
+Return total.
+Main Program:
+
+Set n to 100.
+
+Call the sum of squares function with n and store the result in result.
+
+Display the result of the sum of squares.
+
+Set m to 100.
+
+Call the square of sum function with m and store the result in sumOfNaturalNumbers.
+
+Calculate the square of sumOfNaturalNumbers and store it in sumOfSquares.
+
+Display the result of the square of sum.
+
+Calculate the difference between sumOfSquares and result.
+
+Display the difference.

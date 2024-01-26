@@ -1,0 +1,24 @@
+Function sumOfSquares(n):
+    sum = 0
+    for i from 1 to n:
+        sum += i^2
+    return sum
+
+Function squareOfSum(m):
+    total = 0
+    for i from 1 to m:
+        total += i
+    return total
+
+Main Program:
+    n = 100
+    result = sumOfSquares(n)
+    Output "Sum of the squares of the first " + n + " natural numbers: " + result
+
+    m = 100
+    sumOfNaturalNumbers = squareOfSum(m)
+    sumOfSquares = sumOfNaturalNumbers * sumOfNaturalNumbers
+    Output "Square of sum of the first " + m + " natural numbers: " + sumOfSquares
+
+    difference = sumOfSquares - result
+    Output "Difference between the sum of the squares and the square of the sum: " + difference
