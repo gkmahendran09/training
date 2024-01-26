@@ -1,0 +1,7 @@
+Define a function isPrime(n) that checks if a given number n is prime.
+Initialize an empty array primeNumbersBelow2000000 to store prime numbers below 2,000,000.
+Iterate through numbers from 2 to 1,999,999.
+a. Check if each number is prime using the isPrime function.
+b. If a number is prime, add it to the primeNumbersBelow2000000 array.
+Calculate the sum of all prime numbers in the primeNumbersBelow2000000 array.
+Output the sum of prime numbers below 2,000,000 to the console and the document.
