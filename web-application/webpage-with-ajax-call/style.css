@@ -8,7 +8,7 @@ body {
   background-attachment: fixed;
 }
 
-#container {
+.container {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -21,6 +21,6 @@ body {
 #result {
   margin-top: 20px;
 }
-.butt{
+.button{
   background-color: rgb(255, 251, 0);
 }
