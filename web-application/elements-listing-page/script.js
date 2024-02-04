@@ -1,6 +1,6 @@
-let addPlayer = document.getElementById("add-Player");
-let selectPlayer = document.getElementById("select-Player");
-let playersList = document.getElementById("players-List");
+let addPlayer = document.getElementById("add-player");
+let selectPlayer = document.getElementById("select-player");
+let playersList = document.getElementById("players-list");
 
 function addPlayertolist() {
     let playername = addPlayer.value;
@@ -10,7 +10,5 @@ function addPlayertolist() {
 }
 
 selectPlayer.addEventListener("click", addPlayertolist);
-
-
 
 
