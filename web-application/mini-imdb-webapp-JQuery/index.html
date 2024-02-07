@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Responsive Web App</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="left-section">
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <button class="imdb-button">IMDb</button>
+        <div class="search-bar">
+          <input id="searchInput" type="text" placeholder="Search IMDb">
+          <button class="search-button" onclick="searchMovie()">&#128269;</button>
+        </div>
+      </div>
+      <div class="right-section">
+        <a href="https://www.imdb.com/registration/signin?ref=nv_generic_lgin&u=%2Ftitle%2Ftt6067752%2F" class="sign-in">Sign In</a>
+        <a href="https://apps.apple.com/us/app/imdb-movies-tv-shows/id342792525?%2524canonical_url=https%3A%2F%2Fm.imdb.com%2Fregistration%2Fsignin%3Fref%3Dnv_generic_lgin%26u%3D%252Ftitle%252Ftt6067752%252F&_branch_match_id=1279456481358443667&_branch_referrer=H4sIAAAAAAAAAyWLwQrCMBAFvybXVFObgiBSlF69ipeSxpgubjch2Rb0640K7zAz8CbmmPdVlfE1ShOjRKBntfJ7e7rc6NqNR6F21lAgsAaHJeFh%2Bl5E3QnVl80S5vsobZiLJOchczIMgYpm8AQk6tIfoj7TOnhHLoEd0Jeu9FKqUI3qGRjdn1hvdNs26mcfcN%2BtzZ8AAAA%3D&utm_campaign=mobile%20nav%20bar%20OpenApp&utm_medium=marketing&utm_source=IMDb%20Mdot" class="use-app-button">Use App</a>
+      </div>
+    </div>
+  </header>
+  <div class="content" id="movieDetails">
+    
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
