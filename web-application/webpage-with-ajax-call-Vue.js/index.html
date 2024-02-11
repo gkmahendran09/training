@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB API Ajax Request</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <h2>OMDB API Ajax Request</h2>
+        <button @click="makeAjaxRequest" class="button">Make Ajax Request</button>
+        <div id="result">
+            <h3>Movie Details</h3>
+            <p v-if="movieDetails">Title: {{ movieDetails.Title }}</p>
+            <p v-if="movieDetails">Year: {{ movieDetails.Year }}</p>
+            <p v-if="movieDetails">Rated: {{ movieDetails.Rated }}</p>
+            <p v-if="movieDetails">Released: {{ movieDetails.Released }}</p>
+            <p v-if="movieDetails">Runtime: {{ movieDetails.Runtime }}</p>
+            <p v-if="movieDetails">Genre: {{ movieDetails.Genre }}</p>
+            <p v-if="movieDetails">Director: {{ movieDetails.Director }}</p>
+            <p v-if="movieDetails">Actors: {{ movieDetails.Actors }}</p>
+            <p v-if="movieDetails">Plot: {{ movieDetails.Plot }}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
