@@ -19,7 +19,7 @@ new Vue({
       }
     },
     mounted() {
-      this.generateQuote(); // Generate a quote when the app is mounted
+      this.generateQuote(); 
     }
   });
   
