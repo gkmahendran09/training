@@ -13,9 +13,7 @@ new Vue({
         var movieInfo = document.getElementById('movieInfo');
         movieInfo.scrollIntoView(); // Scroll to the movie info section
         
-        // You can perform additional validation here if needed
-        
-        // Display the movie details
+    
         movieInfo.innerHTML = `
           <h3>${this.movie.title}</h3>
           <p><strong>Director:</strong> ${this.movie.director}</p>
