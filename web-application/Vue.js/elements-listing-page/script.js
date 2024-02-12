@@ -8,7 +8,7 @@ new Vue({
       addPlayerToList() {
         if (this.newPlayerName !== '') {
           this.players.push(this.newPlayerName);
-          this.newPlayerName = ''; // Clear the input field
+          this.newPlayerName = ''; 
         }
       }
     }
