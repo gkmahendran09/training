@@ -17,6 +17,10 @@
         </div>
         <div class="content-area">
             <textarea v-model="postData.message" class="post-input" placeholder="What's on your mind?"></textarea>
+            <div v-if="postData.location" class="location-info">
+                <p>Latitude: {{ postData.location.latitude }}</p>
+                <p>Longitude: {{ postData.location.longitude }}</p>
+            </div>
             <input type="file" id="image-upload" accept="image/*" @change="handleFileInputChange"> 
             <video v-show="isTakingPhoto" autoplay></video> 
             <button class="post-button" @click="capturePhoto">Take Photo</button> 
@@ -29,7 +33,6 @@
                     <button @click="deletePost(post.id)">Delete</button>
                 </div>
             </div> 
-        </div>
     </div>
     <script src="https://unpkg.com/vue@3.2.25/dist/vue.global.prod.js"></script>
     <script src="script.js"></script> 
