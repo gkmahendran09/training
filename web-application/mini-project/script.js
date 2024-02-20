@@ -4,7 +4,7 @@ const app = Vue.createApp({
             postData: {
                 message: '',
                 imageUrl: null,
-                location: null, 
+                location: null,
             },
             posts: [],
             isTakingPhoto: false,
@@ -39,8 +39,19 @@ const app = Vue.createApp({
                 this.isTakingPhoto = false;
             }
         },
-        submitPost() {
+        savePostsToLocalStorage() {
            
+            localStorage.setItem('posts', JSON.stringify(this.posts));
+        },
+        retrievePostsFromLocalStorage() {
+            
+            const storedPosts = localStorage.getItem('posts');
+            if (storedPosts) {
+                this.posts = JSON.parse(storedPosts);
+            }
+        },
+        submitPost() {
+            
             this.posts.push({
                 id: this.posts.length + 1,
                 message: this.postData.message,
@@ -49,6 +60,9 @@ const app = Vue.createApp({
                 location: this.postData.location,
             });
             
+            this.savePostsToLocalStorage();
+
+          
             this.postData.message = '';
             this.postData.imageUrl = null;
             this.postData.location = null;
@@ -56,8 +70,15 @@ const app = Vue.createApp({
         deletePost(id) {
             
             this.posts = this.posts.filter(post => post.id !== id);
+            
+            this.savePostsToLocalStorage();
         }
+    },
+    mounted() {
+        
+        this.retrievePostsFromLocalStorage();
     }
 });
 
 app.mount('#app');
+
