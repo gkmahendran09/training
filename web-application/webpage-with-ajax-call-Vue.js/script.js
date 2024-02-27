@@ -1,20 +1,20 @@
-new Vue({
-    el: '#app',
-    data: {
-      movieDetails: null
+const app = Vue.createApp({
+    data() {
+        return {
+            movieDetails: null
+        };
     },
     methods: {
-      makeAjaxRequest() {
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://www.omdbapi.com/?apikey=b31db97e&i=tt3896198", true);
-        xhr.onreadystatechange = () => {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                this.movieDetails = response;
-            }
-        };
-        xhr.send();
-      }
+        makeAjaxRequest() {
+            axios.get("http://www.omdbapi.com/?apikey=b31db97e&i=tt3896198")
+                .then(response => {
+                    this.movieDetails = response.data;
+                })
+                .catch(error => {
+                    console.error('Error fetching movie details:', error);
+                });
+        }
     }
-  });
-  
+});
+
+app.mount('#app');
