@@ -40,42 +40,44 @@ const app = Vue.createApp({
             }
         },
         savePostsToLocalStorage() {
-           
             localStorage.setItem('posts', JSON.stringify(this.posts));
         },
         retrievePostsFromLocalStorage() {
-            
             const storedPosts = localStorage.getItem('posts');
             if (storedPosts) {
                 this.posts = JSON.parse(storedPosts);
             }
         },
         submitPost() {
-            
-            this.posts.push({
-                id: this.posts.length + 1,
-                message: this.postData.message,
-                imageUrl: this.postData.imageUrl,
-                date: new Date().toLocaleString(),
-                location: this.postData.location,
+            navigator.geolocation.getCurrentPosition(position => {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                
+                this.posts.push({
+                    id: this.posts.length + 1,
+                    message: this.postData.message,
+                    imageUrl: this.postData.imageUrl,
+                    date: new Date().toLocaleString(),
+                    location: { latitude, longitude },
+                });
+                this.savePostsToLocalStorage();
+                this.postData.message = '';
+                this.postData.imageUrl = null;
+                this.postData.location = null;
+            }, error => {
+                console.error('Error getting geolocation:', error);
+                alert('Error getting geolocation.');
             });
-            
-            this.savePostsToLocalStorage();
-
-          
-            this.postData.message = '';
-            this.postData.imageUrl = null;
-            this.postData.location = null;
         },
         deletePost(id) {
-            
-            this.posts = this.posts.filter(post => post.id !== id);
-            
-            this.savePostsToLocalStorage();
+            const index = this.posts.findIndex(post => post.id === id);
+            if (index !== -1) {
+                this.posts.splice(index, 1);
+                this.savePostsToLocalStorage();
+            }
         }
     },
     mounted() {
-        
         this.retrievePostsFromLocalStorage();
     }
 });
