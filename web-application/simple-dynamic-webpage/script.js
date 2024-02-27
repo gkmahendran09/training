@@ -11,15 +11,9 @@ new Vue({
     methods: {
       updateMovieInfo() {
         var movieInfo = document.getElementById('movieInfo');
-        movieInfo.scrollIntoView(); // Scroll to the movie info section
+        movieInfo.scrollIntoView(); 
         
-    
-        movieInfo.innerHTML = `
-          <h3>${this.movie.title}</h3>
-          <p><strong>Director:</strong> ${this.movie.director}</p>
-          <p><strong>Year:</strong> ${this.movie.year}</p>
-          <p><strong>Description:</strong><br>${this.movie.description}</p>
-        `;
+
       }
     }
   });
