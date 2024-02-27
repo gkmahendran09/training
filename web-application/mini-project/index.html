@@ -30,6 +30,8 @@
                     <p>{{ post.message }}</p>
                     <img v-if="post.imageUrl" :src="post.imageUrl" alt="Posted Image">
                     <p>{{ post.date }}</p>
+                    <p v-if="post.location">Latitude: {{ post.location.latitude }}</p>
+                    <p v-if="post.location">Longitude: {{ post.location.longitude }}</p>
                     <button @click="deletePost(post.id)">Delete</button>
                 </div>
             </div> 
@@ -38,3 +40,4 @@
     <script src="script.js"></script> 
 </body>
 </html>
+
