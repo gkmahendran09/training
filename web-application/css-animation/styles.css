@@ -1,0 +1,225 @@
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100px);
+    }
+}
+
+.animated-div {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 187, 0);
+    animation: slideIn 3s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.animatedone {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.animatedtwo {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 200);
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+.animatedthree {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+
+.animatedfour {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.animatedfive {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    animation: spin 2s linear infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animatedsix {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: pulse 1s ease-in-out infinite;
+}
+@keyframes moveDiagonal {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(200px, 200px);
+    }
+}
+
+
+.animatedseven {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    position: relative;
+    animation: moveDiagonal 2s ease-in-out infinite alternate;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.animatedeight {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes rotateAndColorChange {
+    0% {
+        transform: rotate(0deg);
+        background-color: lightblue;
+    }
+    50% {
+        transform: rotate(180deg);
+        background-color: lightgreen;
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: lightcoral;
+    }
+}
+
+
+.animatednine {
+    width: 100px;
+    height: 100px;
+    animation: rotateAndColorChange 4s ease-in-out infinite;
+}
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+.animatedten {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(170, 170, 26);
+    animation: moveLeftToRight 3s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
