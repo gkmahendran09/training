@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR7</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="profile-header">
+            <div class="profile-info">
+                <img class="profile-picture" src="https://assets.manutd.com/AssetPicker/images/0/0/10/126/687707/Legends-Profile_Cristiano-Ronaldo1523460877263.jpg" alt="Profile Picture">
+                <h1 class="username">CRISTIANO RONALDO</h1>
+            </div>
+            <div class="cover-photo"></div>
+        </div>
+        <div class="content-area">
+            <textarea v-model="postData.message" class="post-input" placeholder="What's on your mind?"></textarea>
+            <div v-if="postData.location" class="location-info">
+                <p>Latitude: {{ postData.location.latitude }}</p>
+                <p>Longitude: {{ postData.location.longitude }}</p>
+            </div>
+            <input type="file" id="image-upload" accept="image/*" @change="handleFileInputChange"> 
+            <video v-show="isTakingPhoto" autoplay></video> 
+            <button class="post-button" @click="capturePhoto">Take Photo</button> 
+            <button class="post-button" @click="submitPost">Post</button> 
+            <div id="post-feed">
+                <div v-for="post in posts" :key="post.id" class="post">
+                    <p>{{ post.message }}</p>
+                    <img v-if="post.imageUrl" :src="post.imageUrl" alt="Posted Image">
+                    <p>{{ post.date }}</p>
+                    <p v-if="post.location">Latitude: {{ post.location.latitude }}</p>
+                    <p v-if="post.location">Longitude: {{ post.location.longitude }}</p>
+                    <button @click="deletePost(post.id)">Delete</button>
+                </div>
+            </div> 
+    </div>
+    <script src="https://unpkg.com/vue@3.2.25/dist/vue.global.prod.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>
+
