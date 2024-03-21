@@ -22,8 +22,9 @@ TBD
 pip install -r requirements.txt
 ```
 
-- Run the DB migrations
+3. Run the DB migrations
 
 ```sh
-
+python manage.py makemigrations
+python manage.py migrate
 ```
