@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 
-class TODOO(models.Model):
+class TODO(models.Model):
     srno=models.AutoField(auto_created=True,primary_key=True)
     title= models.CharField(max_length=25)
     date = models.DateTimeField(auto_now_add=True)
