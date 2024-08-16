@@ -1,0 +1,10 @@
+__pycache__
+media/uploads
+db.sqlite3
+db.sqlite3
+*.pyc
+*/*.pyc
+*/*/*.pyc
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
