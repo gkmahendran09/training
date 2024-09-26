@@ -1,7 +1,18 @@
-# Training
+# Blog Application
 
-## Folder Sturucture
+  created a virtual env named myenv.
+  
+  project named as blog.
+  
+  created app named django_blog.
+  
+  Templates inside the blog.
+  
+  Make migrations.
+  
+  
+  
 
-- Create Email Templates in `./email-templates` folder.
-- Create Project Euler solutions in `./project-euler` folder.
-- Create Web Applications in `./web-application` folder.
+
+
+
