@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+</head>
+<body>
+    <h1>user management</h1>
+    <div id="content"></div>
+    <input id="username">
+    <input id="email">
+    <button onclick="createAPI()">create</button>
+
+    <script>
+        let username = "admin";
+        let password = "123456";
+        let url = "http://127.0.0.1:8000/users/";
+        let headers = new Headers();
+
+        headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
+
+        fetch(url, {method:'GET',
+                headers: headers,
+            })
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+            let content = `
+                <h3>Number of users: ${json.count}</h3>
+                <p>User 1: ${json.results[0].username} - ${json.results[0].email} </p>
+                <p>User 2: ${json.results[1].username} - ${json.results[1].email} </p>
+                <p>User 3: ${json.results[2].username} - ${json.results[2].email} </p>
+            `;
+
+            let contentDiv = document.getElementById("content");
+            contentDiv.innerHTML = content;
+        });
+
+        function createAPI() {
+            alert("adsf")
+            let data = {
+                "username": document.getElementById("username").value,
+                "email": document.getElementById("email").value,
+                "groups": []
+            };
+            fetch("http://127.0.0.1:8000/users/", data)
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics</title>
+  </head>
+  <body align="center" style="padding: 100px; font-size: 30px;">
+    <h1>API Basics</h1>
+    <p>
+      <button onclick="doGET()">GET</button>
+      <button onclick="doPOST()">POST</button>
+    </p>
+    <div>
+      <textarea rows="20" cols="100" id="content"></textarea>
+    </div>
+
+    <script>
+        async function doGET() {
+            const response = await fetch("http://localhost:8000");
+            let content = await response.text();
+            console.log(content);
+            document.getElementById("content").value = content;
+            
+        }
+        async function doPOST() {
+            const response = await fetch("http://localhost:8000", { method: "POST"});
+        }
+    </script>
+  </body>
+</html>
